@@ -1,0 +1,319 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080810;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.background-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: #7900ff;
+    filter: blur(180px);
+    opacity: 0.17;
+    top: 10%;
+    right: -200px;
+    z-index: -1;
+}
+
+header {
+    height: 85px;
+    padding: 0 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff12;
+    position: sticky;
+    top: 0;
+    background: #080810dd;
+    backdrop-filter: blur(15px);
+    z-index: 100;
+}
+
+.logo, footer h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.logo span, footer span {
+    color: #a855f7;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #b45cff;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+.hero {
+    min-height: 85vh;
+    padding: 80px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+    animation: fadeUp 1s ease;
+}
+
+.tag {
+    color: #b45cff;
+    letter-spacing: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(55px, 9vw, 100px);
+    line-height: 1.15;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 2px #a855f7;
+}
+
+.description {
+    color: #999;
+    margin: 25px 0;
+    line-height: 1.8;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background: #982fff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px #982fff88;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #a855f7;
+}
+
+.hero-card {
+    width: 300px;
+    height: 350px;
+    border: 1px solid #a855f755;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #1b102b, #090912);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 70px #a855f722;
+    animation: float 4s infinite ease-in-out;
+}
+
+.hero-card h2 {
+    font-family: 'Orbitron';
+    font-size: 90px;
+    color: #b45cff;
+    z-index: 1;
+}
+
+.hero-card p {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #aaa;
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #a855f755;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #a855f744;
+}
+
+.about, .services, .contact {
+    padding: 100px 9%;
+    text-align: center;
+}
+
+.about h2, .services h2, .contact h2 {
+    font-family: 'Orbitron';
+    font-size: clamp(30px, 5vw, 45px);
+    margin-bottom: 25px;
+}
+
+.about h2 span, .services h2 span, .contact h2 span {
+    color: #a855f7;
+}
+
+.about > p:last-child, .contact > p:not(.tag) {
+    color: #999;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.service-card {
+    padding: 35px 25px;
+    text-align: left;
+    border: 1px solid #ffffff18;
+    background: #11111d;
+    border-radius: 12px;
+    transition: .4s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #a855f7;
+    box-shadow: 0 10px 35px #a855f722;
+}
+
+.service-card h3 {
+    color: #bd76ff;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.contact .btn {
+    margin-top: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 15px;
+    border-top: 1px solid #ffffff15;
+}
+
+footer p {
+    font-size: 11px;
+    color: #777;
+    margin-top: 12px;
+    letter-spacing: 2px;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 6%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: #10101c;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 6%;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-card {
+        width: 260px;
+        height: 280px;
+        margin-top: 30px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
